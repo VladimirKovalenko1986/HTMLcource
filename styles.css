@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto&display=swap");
+/* Ссылка стиля текста из  сайта fonts.google.com */
+
+/* * {
+  padding: 0;
+  margin: 0; */
+/* Обращаемся для всех элементов */
+/* } */
+
+body {
+  background-color: #f1f1f1;
+  color: #0f141e;
+  /* Для всего докумнета */
+
+  font-size: 16px;
+  /* Размер шрифта */
+
+  font-weight: normal;
+  /* Жирность шрифта до 500 это нормально (nomal - нормальный шрифт, bolt - жирный) */
+
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    Изменяем стиль шрифта */
+
+  /* font: normal 16px "Roboto", sans-serif;
+  Записываеться в одном значении (жирность/размер/стиль) */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  /* Обращаемся ко всем ссылкам */
+}
+
+a:hover {
+  text-decoration: underline;
+  /* honer -стейт при на ведение обработать событие к тегу а */
+}
+
+a:active {
+  color: blue;
+  /* active - стейт меняет цвет при нажатии  */
+}
+
+a:visited {
+  color: gray;
+  /* ссылки которые не посещали будут подсвечиваться цветом которым мы выбрали */
+}
+
+.avatar {
+  width: 200px;
+  /* Ширина */
+
+  border-radius: 28px;
+  /* Скругление можно указывать в процентах и при 50 будет  картинка круглая*/
+
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+  /* Устанавливаем тень 4 4 14 по оси x y z */
+}
+
+/* #avatar {}  Это для id пишем в HTML вместо функции class но он должен быть уникальный  */
+
+.info p {
+  /* класс info  буквой p мы применяем стилизацию для всех параграфов в классе info */
+  color: #86898f;
+  margin: 0;
+  /* Отступ между строками при вводе 0 мы убираем все отступы каторы делает браузер */
+  font-style: italic;
+  /* Применяем весь шрифт наклонный */
+
+  font-weight: bold;
+  /* Делает шрифт жирным */
+
+  text-decoration: none;
+  /* Обычный текст */
+
+  /* text-decoration: underline;
+  Нижнее подчеркивание текста */
+
+  /* text-decoration: line-through; - зачеркнутый текст */
+
+  /* text-transform: lowercase; - делает весь шрифт маленькими буквами */
+
+  /* text-transform: uppercase; - делает все с заглавных букв*/
+
+  /* text-transform: uppercase; - делает каждое слово с заглавной буквы */
+
+  /* letter-spacing: 15px; - делает растояние между каждым символом */
+
+  /* word-spacing: 42px; - расстояние между словами */
+}
+
+.info {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .info {
+    text-align: center;
+    display: block;
+    /* Доработка для мобильных устройств при сужении экрана будет перемещатся вся характеристика сайта */
+  }
+}
+
+.info-text {
+  margin-left: 40px;
+}
+
+.info-text {
+  margin-bottom: 10px;
+}
+
+/* Box model */
+
+.container {
+  max-width: 750px;
+  /* Ширина всего нашего контейнера, приставка max необходима для адаптации к мобильному или планшету */
+  margin: auto;
+  /* внешний отступ auto все переносит по центру */
+  padding-top: 30px;
+}
+/* .social {
+  background: green;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 30px; */
+/* Можно еще так записать */
+/* padding: 15px 20px 25px 30px; */
+/* 15 за верх 20 за право 25 за низ и 30 за левое, по часовой стрелке */
+/* padding: 15px 40px; */
+/* Это значит что с варху и снизу будет отступ 15px, а слева и с права по 40px */
+/* padding: 15px;
+  Внутрений отступ */
+/* border: 5px solid red; */
+/* Граница по краям 5px это ее размер solid - класс  дальше идет цвет */
+/* border-bottom-style: dotted; */
+/* изменяем нижнюю границу */
+/* border-top-width: 15px; */
+/* Изменяем ширину верхней границы */
+/* border-right-color: blue; */
+/* Изменение цвета правой границы */
+/* margin: 5px; */
+/* внешний отступ функции такие как и в padding*/
+/* }
+
+/* .box-model > div {
+  /* Только для div которые находятся в box-model */
+/* float: left; */
+/* Получаем черную линию где будут четыри элемента */
+/* background: black;
+  height: 200px;
+  border: 4px solid red;
+  width: 25%;
+  box-sizing: border-box; */
+/* Для учета растояния border и margin */
+/* } */
+
+.bg-yellow {
+  background: #fff9dc;
+}
+
+.bg-green {
+  background: #e5ffe7;
+}
+
+.bg-red {
+  background: #ffe5e5;
+  /* класс который мы можем добовлять до каждого класс или отдельно под каждый элемент */
+}
+
+.card {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  /* обращаемся класс card к загаловкам h2 */
+}
+
+.list {
+  padding: 0 0;
+}
+
+.list li {
+  color: #86898f;
+  margin-bottom: 10px;
+  /* border-bottom: 1px solid grey; */
+  /* функция подчеркивания каждогот пункта в списке */
+}
+
+.teble {
+  width: 100%;
+}
+
+.teble td {
+  padding-bottom: 10px;
+  /* пишем padding потому как есть фукция displey если посмотреть в свойствах браузера */
+}
+
+.teble td:nth-child(2),
+.teble td:nth-child(3) {
+  /* передаем значение столбцам которые мы указали  */
+  color: #86898f;
+}
+
+/* .teble tr:nth-child(even) { */
+/* передаем значение even четное и odd не четное */
+/* background: red;
+} */
+
+.link-list {
+  list-style: none;
+  /* можем убрать точки */
+  padding: 0;
+}
+
+.link-list li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.form-group label {
+  display: block;
+  /* label строчный элемент а команда display: block делает в блоке */
+  font-size: 14px;
+  color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  /* Убрали границы */
+  background: transparent;
+  /* Убираем  */
+  border-bottom: 1px solid #ccc;
+  /* Задали нижнюю границу */
+  color: #000;
+  padding: 20px 0 20px;
+  /* верх 15 по бокам 0 а снизу 10 */
+  outline: none;
+  /* Обновляем и убираем при наведени е на область синюю окнтовку */
+  font-family: inherit;
+  /* Делаем один шрифт в заголовках и там где набирать значение */
+}
+
+.row {
+  display: flex;
+  /* Если прописать displey:none то эти элементы исчезнут */
+  margin-bottom: 20px;
+}
+
+.row > .form-group {
+  width: 50%;
+  /* Чтобы ширина форм-группы была 50% */
+  margin-right: 20px;
+}
+
+.row > .form-group:last-child {
+  margin-right: 0;
+  /* last-child или first-child для последнего и для первого элемента применить */
+}
+
+.btn {
+  background: blue;
+  padding: 15px 20px;
+  color: white;
+  border: none;
+  font-family: inherit;
+  cursor: progress;
+  border-radius: 15px;
+}
+
+.btn:hover {
+  opacity: 0.3;
+  /* При наведении меняется в цвете заливка светлеет  */
+}
+
+/* Position */
+
+.position {
+  /* position: relative;
+  border: 4px solid black;
+  margin-top: 40px;
+  padding: 20px;
+  height: 300px; */
+}
+
+.box {
+  /* position: absolute; */
+  /* в функции position изначально позиция находится в static а если задать фукцию  absolute или fixed открываються 4 новых свойства*/
+  /* top: 150px;
+  left: 0;
+  bottom: 10;
+  right: 10px;  мы можем блок перемещать в нутри окна position */
+  /* width: 50px;
+  height: 50px;
+  background: lightcoral;
+  bottom: 0;
+  top: 0; */
+  /* position: fixed; */
+  /* Управляем своим box но уже в середине окна применяем как бегающая фигрурка или можем сделать полосу */
+}
